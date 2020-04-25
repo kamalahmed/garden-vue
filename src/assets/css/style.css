@@ -162,6 +162,15 @@ body {
     transition: 0.3s;
     color: #fff;
 }
+.banner-area .owl-theme .owl-nav [class*='owl-']{
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.banner-area .owl-theme .owl-nav [class*='owl-']:hover{
+    background-color: transparent;
+    border-color: #fff;
+}
 .nav-carousel .owl-nav div:hover {
     border-color: #fff;
 }
