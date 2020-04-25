@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-    @apply font-body;
+    font-size: 15px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -233,7 +233,8 @@ body {
 /*===== cta-box ====*/
 .choose-area {
     position: relative;
-    background-image: url("../img/garden-img7.jpg");
+        /* add dyanmaic bg in template: require('./assets/garden-img7.jpg') */
+
 }
 .choose-area:after {
     position: absolute;
