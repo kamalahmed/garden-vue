@@ -12,7 +12,7 @@
           <Slider :itemPerSlide="itemPerSlide">
             <div v-for="(slide, index) in slides" :key="index" class="service-item bg-white p-4">
               <a :href="slide.buttonlink" class="block">
-                <img :src="require('@/'+slide.image)" alt="Garden img" class="rounded" />
+                <img :src="slide.image" alt="Garden img" class="rounded" />
               </a>
               <h3 class="text-primary font-semibold text-xl pt-8 pb-4 text-medium" v-if="slide.title" v-html="slide.title"></h3>
               <p class="text-ternary text-tiny pb-8 leading-7" v-if="slide.subtitle" v-html="slide.subtitle"></p>

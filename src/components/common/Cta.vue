@@ -1,5 +1,5 @@
 <template>
-  <div class="cta-box bg-white shadow-sm p-12">
+  <div class="cta-box bg-white shadow-sm p-12 relative z-10 -mb-space4">
     <div class="flex items-center justify-between">
       <div class="w-1/2">
         <SectionHeading>

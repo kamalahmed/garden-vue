@@ -41,6 +41,11 @@ module.exports = {
         lighter: '#f5f5f5',
         greendark: '#578a0f',
         greenlight: '#F1F6EA',
+      },
+      zIndex: {
+        '1': 1,
+        '2': 2,
+        '3': 3,
       }
     }
   },

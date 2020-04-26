@@ -1,6 +1,6 @@
 <template>
     <div class="single-slide-item bg-local pt-48 pb-48 relative"
-        :style="{ backgroundImage: 'url(' + require('@/'+slide.image) + ')' }" >
+        :style="{ backgroundImage: 'url(' + slide.image + ')' }" >
         <div class="container">
             <div class="banner-content -mt-6">
                 <p class="text-lg pb-5" v-if="slide.title" v-html="slide.title"></p>

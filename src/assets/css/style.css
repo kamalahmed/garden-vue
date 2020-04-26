@@ -179,10 +179,8 @@ body {
     box-shadow: 0 0 30px rgba(14, 16, 48, 0.05);
 }
 /*===== cta-box ====*/
-.choose-area {
-    position: relative;
-}
-.choose-area:after {
+
+.choose-area::before {
     position: absolute;
     content: "";
     top: 0;
@@ -190,20 +188,12 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.6);
+    z-index: -1;
 }
 
-/*===== cta-box ====*/
-.cta-box {
-    margin-bottom: -100px;
-    z-index: 1;
-    position: relative;
-}
 
 /*===== info-box ====*/
-.info-box {
-    position: relative;
-}
-.info-box:after {
+.info-box::after {
     display: block;
     width: 60%;
     height: 1px;
@@ -213,7 +203,7 @@ body {
     top: 28px;
     left: 74%;
 }
-.info-box:last-child:after {
+.info-box:last-child::after {
     display: none;
 }
 .info-number {

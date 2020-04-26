@@ -3,7 +3,7 @@
     <div class="container">
       <div class="flex items-center">
         <div class="about-img w-1/2" v-if="content.image">
-          <img :src="require('@/'+content.image)" alt="Gardener img" />
+          <img :src="content.image" alt="Gardener img" />
         </div>
         <div class="about-heading w-1/2 pl-24">
           <SectionHeading>
