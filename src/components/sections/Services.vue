@@ -1,0 +1,66 @@
+<template>
+  <section class="service-area nav-carousel text-center padding-top-110">
+    <div class="container">
+      <SectionHeading>
+        <SectionTitle :text="title"/>
+        <SectionSubtitle :text="subtitle"/>
+      </SectionHeading>
+
+      <!-- end section-heading -->
+      <div class="mt-10">
+        <div class="service-wrap -ml-4 -mr-4">
+          <Slider :itemPerSlide="itemPerSlide">
+            <div v-for="(slide, index) in slides" :key="index" class="service-single-item">
+              <a :href="slide.buttonlink" class="block">
+                <img :src="require('@/'+slide.image)" alt="Garden img" class="rounded" />
+              </a>
+              <h3 class="service-item--title" v-if="slide.title" v-html="slide.title"></h3>
+              <p class="text-ternary text-tiny pb-8" v-if="slide.subtitle" v-html="slide.subtitle"></p>
+              <div class="mb-6 flex justify-center">
+                <a
+                  href="#"
+                  class="theme-btn text-sm border-2 border-secondary bg-white hover:border-greendark text-secondary hover:text-white uppercase font-medium py-4 px-10"
+                >
+                  <span class="relative z-10" v-if="slide.buttontext">{{slide.buttontext}}</span>
+                </a>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
+    </div>
+    <!-- container -->
+  </section>
+  <!-- end service-area -->
+</template>
+
+<script>
+import Slider from "@/components/common/Slider";
+import SectionHeading from "@/components/common/SectionHeading";
+import SectionTitle from "@/components/common/SectionTitle";
+import SectionSubtitle from "@/components/common/SectionSubtitle";
+
+export default {
+  name: "Services",
+  data: function () {
+    return {
+      title: 'Gardening services',
+      subtitle: 'We offer a wide range of professional services guaranteed to suit your needs.<br />We deal with all aspects of your garden’s maintenance.'
+    }
+  },
+  props: {
+    itemPerSlide: {
+      type: Number,
+      default: 1
+    },
+    slides: {
+      type: Array,
+      default: function() {
+        return [];
+      }
+    }
+  },
+
+  components: { Slider, SectionHeading, SectionTitle, SectionSubtitle }
+};
+</script>

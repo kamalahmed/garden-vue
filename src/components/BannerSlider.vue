@@ -2,7 +2,7 @@
   <section class="banner-area text-center nav-carousel">
     <div class="homepage-slide-1">
       <carousel :items="itemPerSlide" :navText="[nexttext, prevtext]">
-        <SingleSlide v-for="(slide, index) in slides" :key="index" :slide="slide" />
+        <BannerSingleSlide v-for="(slide, index) in slides" :key="index" :slide="slide" />
       </carousel>
     </div>
     <!-- end homepage-slides -->
@@ -11,10 +11,10 @@
 
 <script>
 import carousel from "vue-owl-carousel";
-import SingleSlide  from "@/components/SingleSlide";
+import BannerSingleSlide  from "@/components/BannerSingleSlide";
 
 export default {
-  name: "Slider",
+  name: "BannerSlider",
   props: {
       itemPerSlide :{
         type: Number,
@@ -37,7 +37,7 @@ export default {
   },
   components: { 
       carousel,
-      SingleSlide,
+      BannerSingleSlide,
       }
 };
 </script>

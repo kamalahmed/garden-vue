@@ -1,12 +1,12 @@
 <template>
   <section class="banner-area text-center nav-carousel">
-    <Slider :slides="slides"/>
+    <BannerSlider :slides="slides"/>
     <!-- end homepage-slides -->
   </section>
 </template>
 
 <script>
-import Slider from "@/components/Slider";
+import BannerSlider from "@/components/BannerSlider";
 
 export default {
   name: "Banner",
@@ -24,6 +24,6 @@ export default {
 
   },
   
-  components: { Slider }
+  components: { BannerSlider }
 };
 </script>
