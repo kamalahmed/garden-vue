@@ -2,12 +2,10 @@
   <div class="cta-box bg-white shadow-sm p-12">
     <div class="flex items-center justify-between">
       <div class="w-1/2">
-        <h3
-          class="text-primary text-mediumbase font-medium pb-3"
-          v-if="content.title"
-          v-html="content.title"
-        ></h3>
-        <p class="text-semibase text-ternary" v-if="content.subtitle" v-html="content.subtitle"></p>
+        <SectionHeading>
+          <SectionTitle v-if="content.title" :text="content.title" classname="text-primary font-bold text-2xxl pb-2" />
+          <SectionSubtitle v-if="content.subtitle" :text="content.subtitle" />
+        </SectionHeading>
       </div>
       <div class="w-1/2" v-if="content.btnlink && content.btntext">
         <div class="btn-box flex justify-end">
@@ -19,7 +17,11 @@
 </template>
 
 <script>
+
 import Button from "@/components/common/Button";
+import SectionHeading from "@/components/common/SectionHeading";
+import SectionTitle from "@/components/common/SectionTitle";
+import SectionSubtitle from "@/components/common/SectionSubtitle";
 
 export default {
   name: "Cta",
@@ -28,6 +30,6 @@ export default {
       type: Object
     }
   },
-  components: { Button }
+  components: { Button, SectionHeading, SectionTitle, SectionSubtitle }
 };
 </script>

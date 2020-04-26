@@ -1,5 +1,5 @@
 <template>
-  <p class="text-semibase text-ternary" :class="classname"  v-html="text"></p>
+  <p class="text-lg text-ternary leading-7" :class="classname"  v-html="text"></p>
 </template>
 
 <script>

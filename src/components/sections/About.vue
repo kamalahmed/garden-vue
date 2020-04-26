@@ -1,5 +1,5 @@
 <template>
-  <section class="about-area bg-greenlight margin-top-266 padding-top-350">
+<section class="about-area bg-greenlight -mt-space11 pt-space13">
     <div class="container">
       <div class="flex items-center">
         <div class="about-img w-1/2" v-if="content.image">
@@ -16,7 +16,10 @@
           </div>
         </div>
       </div>
+        <!-- About Content Box -->
+        
       <Cta :content="content.cta" />
+        <!-- Call to Action Box -->
     </div>
     <!-- container -->
   </section>

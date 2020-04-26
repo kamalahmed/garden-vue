@@ -3,13 +3,13 @@
         :style="{ backgroundImage: 'url(' + require('@/'+slide.image) + ')' }" >
         <div class="container">
             <div class="banner-content -mt-6">
-                <p class="text-semibase text-white pb-5" v-if="slide.title" v-html="slide.title"></p>
-                <h2 class="text-white font-bold text-xlg pb-8" v-if="slide.subtitle" v-html="slide.subtitle"></h2>
+                <p class="text-lg pb-5" v-if="slide.title" v-html="slide.title"></p>
+                <h2 class="font-bold text-5xxl pb-8" v-if="slide.subtitle" v-html="slide.subtitle"></h2>
                 <div class="mt-5">
                 <a
                     v-if="slide.buttonlink"
                     :href="slide.buttonlink"
-                    class="theme-btn text-sm bg-secondary text-white uppercase font-medium py-5 px-10"
+                    class="theme-btn text-sms bg-secondary text-white uppercase font-medium py-5 px-10"
                 >
                     <span class="relative z-10" v-if="slide.buttontext">{{slide.buttontext}}</span>
                 </a>

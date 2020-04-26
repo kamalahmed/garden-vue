@@ -1,12 +1,15 @@
 <template>
-  <section class="banner-area text-center nav-carousel">
-    <BannerSlider :slides="slides"/>
-    <!-- end homepage-slides -->
+  <section class="banner-area text-center nav-carousel text-white -mb-2">
+    <Slider :itemPerSlide="itemPerSlide">
+      <BannerSingleSlide v-for="(slide, index) in slides" :key="index" :slide="slide" />
+
+    </Slider>
   </section>
 </template>
 
 <script>
-import BannerSlider from "@/components/BannerSlider";
+import Slider from "@/components/common/Slider";
+import BannerSingleSlide  from "@/components/BannerSingleSlide";
 
 export default {
   name: "Banner",
@@ -24,6 +27,6 @@ export default {
 
   },
   
-  components: { BannerSlider }
+  components: {Slider, BannerSingleSlide }
 };
 </script>
