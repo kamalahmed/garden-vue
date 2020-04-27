@@ -1,5 +1,5 @@
 <template>
-  <div class="section-heading">
+  <div class="section-heading text-center">
     <slot></slot>
   </div>
 </template>
