@@ -33,6 +33,9 @@ module.exports = {
         space14: '16.625rem', //266px
         space15: '18.75rem', //300px
         space16: '21.875rem', //350px
+        space17: '25rem', //400px
+        space18: '28.125rem', //450px
+        space19: '31.25rem', //500px
       },
       colors: {
         primary: '#353535',
