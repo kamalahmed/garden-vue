@@ -7,6 +7,7 @@
     <WhyChooseUs :content="WhyChooseUsData" />
     <Portfolio :content="PortfolioData" />
     <PricingTable :content="PricingTableData" />
+    <Testimonial :content="TestimonialData" />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import About from "./components/sections/About.vue";
 import WhyChooseUs from "./components/sections/WhyChooseUs.vue";
 import Portfolio from "./components/sections/Portfolio.vue";
 import PricingTable from "./components/sections/PricingTable.vue";
+import Testimonial from "./components/sections/Testimonial.vue";
 
 let bannerSliderSlides = [
   {
@@ -217,6 +219,38 @@ let PricingTableData = {
     }
   ]
 };
+let TestimonialData = {
+  image: require("@/assets/img/garden-img8.jpg"),
+
+  testimonials: [
+    {
+      name: "Sara Grant",
+      address: "Kansas City, Missouri",
+      content: "Always prompt, polite, fairly priced. Never a hard sell for extras and knowledgable too. Price is hard to approximate as variety of work is diverse.",
+    },
+    {
+      name: "Luke Jacobs",
+      address: "Arlington, Washington",
+      content: "Great quality plants at fair prices and very helpful staff. I had an issue which was resolved promptly. I do not hesitate to recommend this company.",
+    },
+    {
+      name: "Claire Olson",
+      address: "Sky Valley, California",
+      content: "The team did a great job with my patio. They cleaned it in a timely manner and cleaned it really well. I was surprised to see the original colour.",
+    },
+    {
+      name: "Phillip Hunt",
+      address: "Chicago, Illinois",
+      content: "Your team achieved great results in my garden. It was all covered with bushes and weeds, but they managed to clear it up. Will book gardening services again.",
+    },
+    {
+      name: "Phillip Bunt",
+      address: "Chapel Hill, North Carolina",
+      content: "Coming up to summer, we really wanted somewhere outside where we could entertain guests. Thanks to your gardeners we now have a nice clean patio.",
+    },
+  ],
+  itemPerSlide: 1,
+};
 
 export default {
   name: "App",
@@ -234,6 +268,7 @@ export default {
       WhyChooseUsData,
       PortfolioData,
       PricingTableData,
+      TestimonialData,
     };
   },
   components: {
@@ -244,6 +279,7 @@ export default {
     WhyChooseUs,
     Portfolio,
     PricingTable,
+    Testimonial
   }
 };
 </script>
