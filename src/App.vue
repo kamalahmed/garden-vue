@@ -5,6 +5,7 @@
     <Services :slides="serviceSlider.slides" :itemPerSlide="serviceSlider.itemPerSlide" />
     <About :content="AboutSectionData" />
     <WhyChooseUs :content="WhyChooseUsData" />
+    <Portfolio :content="PortfolioData" />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import Banner from "./components/sections/Banner.vue";
 import Services from "./components/sections/Services.vue";
 import About from "./components/sections/About.vue";
 import WhyChooseUs from "./components/sections/WhyChooseUs.vue";
+import Portfolio from "./components/sections/Portfolio.vue";
 
 let bannerSliderSlides = [
   {
@@ -113,6 +115,49 @@ let WhyChooseUsData = {
   ]
 };
 
+let PortfolioData = {
+  title: "Our latest works",
+  subtitle: "To find out more or to take advantage of our professional, competitively <br> priced services contact us today.",
+  portfolios: [
+    {
+      image: require("@/assets/img/garden-portfolio1.jpg"),
+      title: "Hedge trimming",
+      subtitle: "Vitae auctor eu augue",
+      link: "#",
+    },
+    {
+      image: require("@/assets/img/garden-portfolio2.jpg"),
+      title: "Mulch install",
+      subtitle: "Purus sit amet volutpat",
+      link: "#",
+    },
+    {
+      image: require("@/assets/img/garden-portfolio3.jpg"),
+      title: "Pressure washing",
+      subtitle: "Vitae auctor eu augue",
+      link: "#",
+    },
+    {
+      image: require("@/assets/img/garden-portfolio4.jpg"),
+      title: "Shrub fertilizing",
+      subtitle: "Vitae auctor eu augue",
+      link: "#",
+    },
+    {
+      image: require("@/assets/img/garden-portfolio5.jpg"),
+      title: "Lawn renovation",
+      subtitle: "Vitae auctor eu augue",
+      link: "#",
+    },
+    {
+      image: require("@/assets/img/garden-portfolio6.jpg"),
+      title: "Debris disposal",
+      subtitle: "Vitae auctor eu augue",
+      link: "#",
+    },
+  ]
+}
+
 export default {
   name: "App",
   data: function() {
@@ -126,7 +171,8 @@ export default {
         itemPerSlide: 3
       },
       AboutSectionData,
-      WhyChooseUsData
+      WhyChooseUsData,
+      PortfolioData,
     };
   },
   components: {
@@ -134,7 +180,8 @@ export default {
     Banner,
     Services,
     About,
-    WhyChooseUs
+    WhyChooseUs,
+    Portfolio,
   }
 };
 </script>
