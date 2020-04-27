@@ -1,7 +1,7 @@
 <template>
   <div
-    class="lg:w-1/3 md:w-full sm:w-full mb-8 bg-white pricing-item"
-    :class="{ 'pricing-item-active' : plan.isFeatured }"
+    class="lg:w-1/3 md:w-full sm:w-full mb-8 bg-white pricing-item bg-white relative"
+    :class=" plan.isFeatured ? 'pricing-item-active z-3' : 'z-2'"
   >
     <div
       class="license-type py-6 text-lg font-semibold"

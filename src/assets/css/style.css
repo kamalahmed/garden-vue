@@ -264,14 +264,10 @@ body {
 
 /*===== Pricing item ========*/
 .pricing-item {
-    background: #fff;
-    position: relative;
     box-shadow: 0 25px 98px 0 rgba(0,0,0,.07);
-    z-index: 1;
 }
 .pricing-item-active {
     margin: -30px 0;
-    z-index: 2;
 }
 
 /*===== Pricing switcher ========*/

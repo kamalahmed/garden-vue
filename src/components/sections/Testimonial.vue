@@ -1,7 +1,7 @@
 <template>
   <!-- START TESTIMONIAL-AREA -->
   <section
-    class="choose-area text-white testimonial-area nav-carousel bg-fixed bg-no-repeat bg-cover -mt-space14 pt-space15 pb-space8 text-center"
+    class="choose-area relative z-1 text-white testimonial-area nav-carousel bg-fixed bg-no-repeat bg-cover -mt-space14 pt-space15 pb-space8 text-center"
     :style="{ backgroundImage: 'url(' + content.image + ')' }"
   >
     <div class="container">
