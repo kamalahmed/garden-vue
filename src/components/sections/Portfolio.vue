@@ -1,18 +1,23 @@
 <template>
-<section class="portfolio-area pt-space5 pb-space3">
+  <section class="portfolio-area pt-space5 pb-space3">
     <div class="container">
-        <SectionHeading>
-        <SectionTitle :text="content.title"/>
-        <SectionSubtitle :text="content.subtitle"/>
+      <SectionHeading>
+        <SectionTitle :text="content.title" />
+        <SectionSubtitle :text="content.subtitle" />
       </SectionHeading>
-        <!-- end section-heading -->
-        <div class="pt-space3">
-            <div class="flex flex-wrap -ml-3 -mr-3">
-                <PortfolioSingle v-for="(portfolio, i) in content.portfolios" :key="i" :portfolio="portfolio" />
-            </div>
+      <!-- end section-heading -->
+      <div class="pt-space3">
+        <div class="flex flex-wrap -ml-3 -mr-3">
+          <PortfolioSingle
+            v-for="(portfolio, i) in content.portfolios"
+            :key="i"
+            :portfolio="portfolio"
+          />
         </div>
-    </div><!-- container -->
-</section>
+      </div>
+    </div>
+    <!-- container -->
+  </section>
 </template>
 
 <script>
@@ -28,6 +33,6 @@ export default {
       type: Object
     }
   },
-  components: { PortfolioSingle, SectionHeading, SectionTitle, SectionSubtitle },
+  components: { PortfolioSingle, SectionHeading, SectionTitle, SectionSubtitle }
 };
 </script>

@@ -6,6 +6,7 @@
     <About :content="AboutSectionData" />
     <WhyChooseUs :content="WhyChooseUsData" />
     <Portfolio :content="PortfolioData" />
+    <PricingTable :content="PricingTableData" />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Services from "./components/sections/Services.vue";
 import About from "./components/sections/About.vue";
 import WhyChooseUs from "./components/sections/WhyChooseUs.vue";
 import Portfolio from "./components/sections/Portfolio.vue";
+import PricingTable from "./components/sections/PricingTable.vue";
 
 let bannerSliderSlides = [
   {
@@ -117,46 +119,104 @@ let WhyChooseUsData = {
 
 let PortfolioData = {
   title: "Our latest works",
-  subtitle: "To find out more or to take advantage of our professional, competitively <br> priced services contact us today.",
+  subtitle:
+    "To find out more or to take advantage of our professional, competitively <br> priced services contact us today.",
   portfolios: [
     {
       image: require("@/assets/img/garden-portfolio1.jpg"),
       title: "Hedge trimming",
       subtitle: "Vitae auctor eu augue",
-      link: "#",
+      link: "#"
     },
     {
       image: require("@/assets/img/garden-portfolio2.jpg"),
       title: "Mulch install",
       subtitle: "Purus sit amet volutpat",
-      link: "#",
+      link: "#"
     },
     {
       image: require("@/assets/img/garden-portfolio3.jpg"),
       title: "Pressure washing",
       subtitle: "Vitae auctor eu augue",
-      link: "#",
+      link: "#"
     },
     {
       image: require("@/assets/img/garden-portfolio4.jpg"),
       title: "Shrub fertilizing",
       subtitle: "Vitae auctor eu augue",
-      link: "#",
+      link: "#"
     },
     {
       image: require("@/assets/img/garden-portfolio5.jpg"),
       title: "Lawn renovation",
       subtitle: "Vitae auctor eu augue",
-      link: "#",
+      link: "#"
     },
     {
       image: require("@/assets/img/garden-portfolio6.jpg"),
       title: "Debris disposal",
       subtitle: "Vitae auctor eu augue",
-      link: "#",
-    },
+      link: "#"
+    }
   ]
-}
+};
+let PricingTableData = {
+  title: "Maintenance plans",
+  subtitle:
+    "Check out the price for getting a professional design plan completed to suit <br> you and your garden.",
+  showDurationToggle: true,
+  planDuration: ["Monthly", "Yearly"],
+  plans: [
+    {
+      title: "Basic",
+      monthlyPrice: "150",
+      yearlyPrice: "900",
+      currencySymbol: "$",
+      icon: require("@/assets/img/plan-icon-1.svg"),
+      buttonText: "Get Quote",
+      buttonLink: "#",
+      isFeatured: false,
+      features: [
+        "Hedge Trim",
+        "Mulch Install",
+        "Pressure washing",
+        "shrub fertilizing"
+      ]
+    },
+    {
+      title: "Delux",
+      monthlyPrice: "200",
+      yearlyPrice: "1200",
+      currencySymbol: "$",
+      icon: require("@/assets/img/plan-icon-2.svg"),
+      buttonText: "Get Quote",
+      buttonLink: "#",
+      isFeatured: true,
+      features: [
+        "Lawn renovation",
+        "Debris disposal",
+        "Annual fertilization",
+        "Pressure washing"
+      ]
+    },
+    {
+      title: "Premium",
+      monthlyPrice: "250",
+      yearlyPrice: "1500",
+      currencySymbol: "$",
+      icon: require("@/assets/img/plan-icon-3.svg"),
+      buttonText: "Get Quote",
+      buttonLink: "#",
+      isFeatured: false,
+      features: [
+        "Hedge Trim",
+        "Mulch Install",
+        "Pressure washing",
+        "shrub fertilizing"
+      ]
+    }
+  ]
+};
 
 export default {
   name: "App",
@@ -173,6 +233,7 @@ export default {
       AboutSectionData,
       WhyChooseUsData,
       PortfolioData,
+      PricingTableData,
     };
   },
   components: {
@@ -182,6 +243,7 @@ export default {
     About,
     WhyChooseUs,
     Portfolio,
+    PricingTable,
   }
 };
 </script>
