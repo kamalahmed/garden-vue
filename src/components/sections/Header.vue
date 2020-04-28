@@ -12,7 +12,7 @@
                     href="#"
                     class="text-primary hover:text-secondary focus:outline-none ease-in-out duration-300"
                   >
-                    <i class="fa fa-phone mr-1 text-primary text-base"></i> (222) 400-630
+                  <font-awesome-icon :icon="['fas', 'phone-alt']" :class="'mr-1 text-primary text-base'" /> (222) 400-630
                   </a>
                 </li>
                 <li class="mr-4 pr-4 border-l pt-3 pb-3 pl-4 text-sm">
@@ -20,11 +20,11 @@
                     href="#"
                     class="text-primary hover:text-secondary focus:outline-none ease-in-out duration-300"
                   >
-                    <i class="fa fa-envelope mr-1 text-primary text-base"></i> contact@ekko-theme.com
+                    <font-awesome-icon :icon="['far', 'envelope']" :class="'mr-1 text-primary text-base'" /> contact@ekko-theme.com
                   </a>
                 </li>
                 <li class="pr-4 pl-4 border-l pt-3 pb-3 border-r text-sm text-primary">
-                  <i class="fa fa-clock-o mr-1 text-black text-base"></i> Monday - Friday: 10:00 - 18:00
+                  <font-awesome-icon :icon="['far', 'clock']" :class="'mr-1 text-primary text-base'" />  Monday - Friday: 10:00 - 18:00
                 </li>
               </ul>
               <div class="flex items-center">
