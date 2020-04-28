@@ -10,6 +10,7 @@
     <Testimonial :content="TestimonialData" />
     <LatestBlog :content="LatestBlogData" />
     <CallToAction :content="CallToActionData" />
+    <Contact />
   </div>
 </template>
 
@@ -25,6 +26,7 @@ import PricingTable from "./components/sections/PricingTable.vue";
 import Testimonial from "./components/sections/Testimonial.vue";
 import LatestBlog from "./components/sections/LatestBlog.vue";
 import CallToAction from "./components/sections/CallToAction.vue";
+import Contact from "./components/sections/Contact.vue";
 
 let bannerSliderSlides = [
   {
@@ -326,6 +328,7 @@ export default {
     Testimonial,
     LatestBlog,
     CallToAction,
+    Contact,
   }
 };
 </script>
