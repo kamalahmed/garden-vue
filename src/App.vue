@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <HeaderSection />
     <Banner :slides="bannerSlider.slides" :itemPerSlide="bannerSlider.itemPerSlide" />
     <Services :slides="serviceSlider.slides" :itemPerSlide="serviceSlider.itemPerSlide" />
     <About :content="AboutSectionData" />
@@ -11,12 +11,13 @@
     <LatestBlog :content="LatestBlogData" />
     <CallToAction :content="CallToActionData" />
     <Contact />
+    <FooterSection />
   </div>
 </template>
 
 <script>
 import "./assets/css/style.css";
-import Header from "./components/sections/Header.vue";
+import HeaderSection from "./components/sections/HeaderSection.vue";
 import Banner from "./components/sections/Banner.vue";
 import Services from "./components/sections/Services.vue";
 import About from "./components/sections/About.vue";
@@ -27,6 +28,7 @@ import Testimonial from "./components/sections/Testimonial.vue";
 import LatestBlog from "./components/sections/LatestBlog.vue";
 import CallToAction from "./components/sections/CallToAction.vue";
 import Contact from "./components/sections/Contact.vue";
+import FooterSection from "./components/sections/FooterSection.vue";
 
 let bannerSliderSlides = [
   {
@@ -318,7 +320,7 @@ export default {
     };
   },
   components: {
-    Header,
+    HeaderSection,
     Banner,
     Services,
     About,
@@ -329,6 +331,7 @@ export default {
     LatestBlog,
     CallToAction,
     Contact,
+    FooterSection,
   }
 };
 </script>
