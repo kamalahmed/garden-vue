@@ -9,6 +9,7 @@
     <PricingTable :content="PricingTableData" />
     <Testimonial :content="TestimonialData" />
     <LatestBlog :content="LatestBlogData" />
+    <CallToAction :content="CallToActionData" />
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import Portfolio from "./components/sections/Portfolio.vue";
 import PricingTable from "./components/sections/PricingTable.vue";
 import Testimonial from "./components/sections/Testimonial.vue";
 import LatestBlog from "./components/sections/LatestBlog.vue";
+import CallToAction from "./components/sections/CallToAction.vue";
 
 let bannerSliderSlides = [
   {
@@ -284,6 +286,14 @@ let LatestBlogData = {
   loadMoreText: 'View All Articles',
   loadMoreLink: '#',
 };
+let CallToActionData = {
+  title: "For a free site visit and quotation, <br>just give us a call.",
+  subtitle: "Call us now: (222) 400-630",
+  buttonText: 'Purchase Ekko',
+  buttonLink: '#',
+  contactLink: '#',
+  contactLinkText: 'send us a message'
+}
 export default {
   name: "App",
   data: function() {
@@ -302,6 +312,7 @@ export default {
       PricingTableData,
       TestimonialData,
       LatestBlogData,
+      CallToActionData,
     };
   },
   components: {
@@ -314,6 +325,7 @@ export default {
     PricingTable,
     Testimonial,
     LatestBlog,
+    CallToAction,
   }
 };
 </script>
