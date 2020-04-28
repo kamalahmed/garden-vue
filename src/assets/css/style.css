@@ -330,16 +330,16 @@ body {
 }
 
 /*===== blog card ========*/
-.blog-card {
-    transition: 0.3s;
-}
-.blog-card .service-item {
-    @apply .mr-0 .ml-0;
-}
+
 .blog-card:hover {
     transform: translateY(-6px);
 }
-
+.blog-card__title{
+    @apply .text-primary .ease-in-out .duration-300 .font-semibold .text-xl .leading-8 .pb-4;
+}
+.blog-card__link {
+    @apply .text-sm .font-medium .ease-in-out .duration-300;
+}
 /*===== scroll-top ========*/
 #scroll-top {
     position: fixed;

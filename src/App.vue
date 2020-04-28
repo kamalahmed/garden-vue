@@ -8,6 +8,7 @@
     <Portfolio :content="PortfolioData" />
     <PricingTable :content="PricingTableData" />
     <Testimonial :content="TestimonialData" />
+    <LatestBlog :content="LatestBlogData" />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import WhyChooseUs from "./components/sections/WhyChooseUs.vue";
 import Portfolio from "./components/sections/Portfolio.vue";
 import PricingTable from "./components/sections/PricingTable.vue";
 import Testimonial from "./components/sections/Testimonial.vue";
+import LatestBlog from "./components/sections/LatestBlog.vue";
 
 let bannerSliderSlides = [
   {
@@ -251,7 +253,37 @@ let TestimonialData = {
   ],
   itemPerSlide: 1,
 };
-
+let LatestBlogData = {
+  title: "Articles you might like",
+  subtitle:
+    "Explore our blog for insightful articles, personal reflections and ideas that <br />inspire action on the topics you care about.",
+  posts: [
+    {
+      id: 1,
+      image: require("@/assets/img/blog-img1.jpg"),
+      title: "Seasonal lawn care tips for the perfect yard",
+      buttonText: "Read more",
+      link: "#"
+    },
+    {
+      id: 2,
+      image: require("@/assets/img/blog-img2.jpg"),
+      title: "How your garden can boost your home’s value",
+      buttonText: "Read more",
+      link: "#"
+    },
+    {
+      id: 3,
+      image: require("@/assets/img/blog-img3.jpg"),
+      title: "How to grow and enjoy microgreens year-round",
+      buttonText: "Read more",
+      link: "#"
+    },
+  
+  ],
+  loadMoreText: 'View All Articles',
+  loadMoreLink: '#',
+};
 export default {
   name: "App",
   data: function() {
@@ -269,6 +301,7 @@ export default {
       PortfolioData,
       PricingTableData,
       TestimonialData,
+      LatestBlogData,
     };
   },
   components: {
@@ -279,7 +312,8 @@ export default {
     WhyChooseUs,
     Portfolio,
     PricingTable,
-    Testimonial
+    Testimonial,
+    LatestBlog,
   }
 };
 </script>
