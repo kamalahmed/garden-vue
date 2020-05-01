@@ -97,7 +97,7 @@
                 <div>
                     <div class="flex items-center justify-between h-24">
                         <div>
-                            <a class="logo fw-bold" href="/" title="Ekko Gardener">Ekko Garden</a>
+                            <a class="logo font-bold text-2xl" href="/" title="Ekko Gardener">Ekko Garden</a>
                         </div>
                         <div>
                             <div class="hidden lg:block">
