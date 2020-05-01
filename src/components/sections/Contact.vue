@@ -1,6 +1,6 @@
 <template>
   <section
-    class="choose-area text-white contact-area bg-fixed bg-no-repeat bg-cover py-space5"
+    class="choose-area relative z-1 text-white contact-area bg-fixed bg-no-repeat bg-cover py-space5"
     :style="{'background-image': 'url('+require('@/assets/img/garden-img7.jpg')+')'}"
   >
     <div class="container">
@@ -25,7 +25,7 @@
                     name="text"
                     type="text"
                     required
-                    class="appearance-none bg-white relative block w-full px-6 py-4 mb-3 placeholder-ternary focus:outline-none focus:z-10 sm:text-sm sm:leading-5"
+                    class="appearance-none bg-white text-primary relative block w-full px-6 py-4 mb-3 placeholder-ternary focus:outline-none focus:z-10 sm:text-sm sm:leading-5"
                     placeholder="Your name"
                   />
                 </div>
@@ -34,14 +34,14 @@
                     name="email"
                     type="email"
                     required
-                    class="appearance-none bg-white relative block w-full px-6 py-4 mb-3 placeholder-ternary focus:outline-none focus:z-10 sm:text-sm sm:leading-5"
+                    class="appearance-none bg-white text-primary relative block w-full px-6 py-4 mb-3 placeholder-ternary focus:outline-none focus:z-10 sm:text-sm sm:leading-5"
                     placeholder="Your email"
                   />
                 </div>
                 <div class="form-group">
                   <textarea
                     name="message"
-                    class="appearance-none bg-white relative block w-full px-6 pt-4 h-space4 mb-3 placeholder-ternary focus:outline-none focus:z-10 sm:text-sm sm:leading-5"
+                    class="appearance-none bg-white text-primary relative block w-full px-6 pt-4 h-space4 mb-3 placeholder-ternary focus:outline-none focus:z-10 sm:text-sm sm:leading-5"
                     placeholder="Your message"
                   ></textarea>
                 </div>

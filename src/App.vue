@@ -11,7 +11,7 @@
     <LatestBlog :content="LatestBlogData" />
     <CallToAction :content="CallToActionData" />
     <Contact />
-    <FooterSection />
+    <FooterSection :content="FooterSectionData" />
   </div>
 </template>
 
@@ -170,6 +170,7 @@ let PortfolioData = {
     }
   ]
 };
+
 let PricingTableData = {
   title: "Maintenance plans",
   subtitle:
@@ -227,6 +228,7 @@ let PricingTableData = {
     }
   ]
 };
+
 let TestimonialData = {
   image: require("@/assets/img/garden-img8.jpg"),
 
@@ -259,6 +261,7 @@ let TestimonialData = {
   ],
   itemPerSlide: 1,
 };
+
 let LatestBlogData = {
   title: "Articles you might like",
   subtitle:
@@ -290,6 +293,7 @@ let LatestBlogData = {
   loadMoreText: 'View All Articles',
   loadMoreLink: '#',
 };
+
 let CallToActionData = {
   title: "For a free site visit and quotation, <br>just give us a call.",
   subtitle: "Call us now: (222) 400-630",
@@ -298,6 +302,93 @@ let CallToActionData = {
   contactLink: '#',
   contactLinkText: 'send us a message'
 }
+
+let FooterSectionData = {
+  footerTop : {
+    pageLinks : [
+      {
+        name: 'About',
+        url: 'about'
+      },
+      {
+        name: 'Disclaimer',
+        url: 'disclaimer'
+      },
+      {
+        name: 'Privacy',
+        url: 'privacy'
+      },
+      {
+        name: 'Advertise',
+        url: 'advertise'
+      },
+      {
+        name: 'Contact us',
+        url: 'contact-us'
+      },
+    ],
+    socialLinks: [
+      {
+        url: "#",
+        icon: "facebook-f",
+        },
+      {
+        url: "#",
+        icon: "twitter",
+        },
+      {
+        url: "#",
+        icon: "instagram",
+        },
+     
+    ]
+  },
+  footerBottom: {
+    widgets: [
+      {
+        type: 'link',
+        title: "About",
+        links: [
+          {name: "Services", url:"#"},
+          {name: "Our Shop", url:"#"},
+          {name: "Job Opportunities", url:"#"},
+          {name: "Calender of events", url:"#"},
+          {name: "London", url:"#"},
+        ]
+      },
+      {
+        type: 'link',
+        title: "Additional links",
+        links: [
+          {name: "About us", url:"#"},
+          {name: "Terms and conditions", url:"#"},
+          {name: "Privacy policy", url:"#"},
+          {name: "News", url:"#"},
+          {name: "Contact us", url:"#"},
+        ]
+      },
+      {
+        type: 'link',
+        title: "Categories",
+        links: [
+          {name: "Garden trends", url:"#"},
+          {name: "Houseplants", url:"#"},
+          {name: "Landscaping", url:"#"},
+          {name: "Plant care", url:"#"},
+          {name: "London", url:"#"},
+        ]
+      },
+      {
+        type: 'text',
+        title: "Ekko",
+        description: "Making a positive first impression is essential to developing a strong customer relationship. Ekko is powerful enough to assist any small businesses."
+      },
+    ]
+  },
+  copyRight: "Ekko by KeyDesign. All rights reserved."
+}
+
+
 export default {
   name: "App",
   data: function() {
@@ -317,6 +408,7 @@ export default {
       TestimonialData,
       LatestBlogData,
       CallToActionData,
+      FooterSectionData,
     };
   },
   components: {
