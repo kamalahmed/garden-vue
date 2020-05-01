@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: "FooterCredit",
+  name: "FooterWidget",
   props: {
       widget : {
           type : Object

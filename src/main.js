@@ -10,6 +10,16 @@ library.add(faFacebookF, faTwitter, faInstagram, faSearch, faTimes, faShoppingCa
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
+import * as VueGoogleMaps from 'vue2-google-maps'
+ 
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAYzby4yYDVaXPmtu4jZAGR258K6IYwjIY', // PLEASE USE YOUR OWN API KEY
+  },
+ 
+})
+
+
 
 new Vue({
   render: h => h(App),

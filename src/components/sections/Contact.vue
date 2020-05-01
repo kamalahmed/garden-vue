@@ -6,7 +6,17 @@
     <div class="container">
       <div class="contact-wrap flex flex-wrap relative z-10">
         <div class="lg:w-1/2 md:w-full sm:w-full map-container">
-          <div id="map" class="w-full h-space18"></div>
+          <GmapMap
+            :center="{lat:34.058702, lng:-118.272881}"
+            :zoom="13"
+            map-type-id="terrain"
+            :class="'w-full h-space18'"
+            :options="{styles:mapStyle}"
+          >
+            <GmapMarker ref="mapRef"
+    :position="google && new google.maps.LatLng(34.058702, -118.272881)" />
+          </GmapMap>
+
           <!-- end map -->
         </div>
         <div class="lg:w-1/2 md:w-full sm:w-full">
@@ -69,14 +79,66 @@ import SectionHeading from "@/components/common/SectionHeading";
 import SectionTitle from "@/components/common/SectionTitle";
 import SectionSubtitle from "@/components/common/SectionSubtitle";
 import PortfolioSingle from "@/components/PortfolioSingle.vue";
+import {gmapApi} from 'vue2-google-maps'
 
 export default {
   name: "Contact",
+  data: function () {
+    return {
+      mapStyle : [
+                {
+                    "featureType" : "road",
+                    "stylers" : [
+                        {"color" : "#ffffff"}
+                    ]
+                }, {
+                    "featureType" : "water",
+                    "stylers" : [
+                        {"color" : "#e9e9e9"}
+                    ]
+                }, {
+                    "featureType" : "landscape",
+                    "stylers" : [
+                        {"color" : "#f5f5f5"}
+                    ]
+                }, {
+                    "elementType" : "labels.text.fill",
+                    "stylers" : [
+                        {"color" : "transparent"}
+                    ]
+                }, {
+                    "featureType" : "poi",
+                    "stylers" : [
+                        {"color" : "#fefefe"}
+                    ]
+                }, {
+                    "elementType" : "labels.text",
+                    "stylers" : [
+                        {"saturation" : 1},
+                        {"weight" : 0.1},
+                        {"color" : "#737980"}
+                    ]
+                }
+            ]
+    }
+  },
   props: {
     content: {
       type: Object
     }
   },
-  components: { SectionHeading, SectionTitle, SectionSubtitle }
+  components: { SectionHeading, SectionTitle, SectionSubtitle },
+  computed: {
+    google: gmapApi
+  },
+  mounted() {
+    // At this point, the child GmapMap has been mounted, but
+    // its map has not been initialized.
+    // Therefore we need to write mapRef.$mapPromise.then(() => ...)
+
+    this.$refs.mapRef.$mapPromise.then(map => {
+      map.panTo({ lat: 34.058702, lng: -118.272881 });
+    });
+  }
 };
 </script>
