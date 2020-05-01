@@ -96,12 +96,13 @@ body {
     transition: 0.3s;
     color: #fff;
 }
-.banner-area .owl-theme .owl-nav [class*='owl-']{
+.nav-carousel .owl-theme .owl-nav [class*='owl-']{
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 2px 7px;
 }
-.banner-area .owl-theme .owl-nav [class*='owl-']:hover{
+.nav-carousel .owl-theme .owl-nav [class*='owl-']:hover{
     background-color: transparent;
     border-color: #fff;
 }
