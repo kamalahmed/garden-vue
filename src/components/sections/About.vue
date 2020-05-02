@@ -1,5 +1,5 @@
 <template>
-<section class="about-area bg-greenlight -mt-space11 pt-space13">
+<section class="about-area bg-greenlight -mt-space11 pt-space13  md:pb-10">
     <div class="container">
       <div class="lg:flex items-center">
         <div class="about-img lg:w-1/2" v-if="content.image">

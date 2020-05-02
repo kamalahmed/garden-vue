@@ -10,8 +10,8 @@
         <h2 class="font-bold text-4xxl"  v-if="content.subtitle" v-html="content.subtitle"></h2>
       </div>
       <!-- end section-heading -->
-      <div class="mt-16 flex">
-        <div class="info-box relative w-1/3 px-3" v-for="(reason, i) in content.reasons" :key="i">
+      <div class="flex flex-wrap mt-16">
+        <div class="info-box mb-8 md:w-1/3 sm:w-full px-3" v-for="(reason, i) in content.reasons" :key="i">
           <div class="info-number" v-if="reason.number">
             <div class="info-number-overlay"></div>
             <span class="text-base font-semibold mx-auto">{{reason.number}}</span>
