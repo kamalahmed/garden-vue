@@ -1,14 +1,14 @@
 <template>
 <section class="about-area bg-greenlight -mt-space11 pt-space13">
     <div class="container">
-      <div class="flex items-center">
-        <div class="about-img w-1/2" v-if="content.image">
+      <div class="lg:flex items-center">
+        <div class="about-img lg:w-1/2" v-if="content.image">
           <img :src="content.image" alt="Gardener img" />
         </div>
-        <div class="about-heading w-1/2 pl-24">
-          <SectionHeading>
+        <div class="about-heading lg:w-1/2 lg:pl-24 md:pt-10 sm:pt-10">
+          <SectionHeading classname="section-heading">
             <SectionTitle :text="content.title" />
-            <SectionSubtitle :text="content.subtitle" />
+            <SectionSubtitle :text="content.subtitle" classname="text-semibase text-ternary leading-7" />
           </SectionHeading>
           <!-- end section-heading -->
           <div class="btn-box flex mt-8">

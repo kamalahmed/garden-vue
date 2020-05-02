@@ -1,14 +1,14 @@
 <template>
-  <div class="cta-box bg-white shadow-sm p-12 relative z-10 -mb-space4">
-    <div class="flex items-center justify-between">
-      <div class="w-1/2">
-        <SectionHeading>
+  <div class="cta-box bg-white shadow-sm p-12 sm:mt-20 md:mt-20 lg:mt-0">
+    <div class="lg:flex items-center justify-between">
+      <div class="lg:w-1/2">
+        <SectionHeading classname="'section-heading'">
           <SectionTitle v-if="content.title" :text="content.title" classname="text-primary font-bold text-2xxl pb-2" />
-          <SectionSubtitle v-if="content.subtitle" :text="content.subtitle" />
+          <SectionSubtitle v-if="content.subtitle" :text="content.subtitle" classname="text-base text-ternary leading-7" />
         </SectionHeading>
       </div>
-      <div class="w-1/2" v-if="content.btnlink && content.btntext">
-        <div class="btn-box flex justify-end">
+      <div class="lg:w-1/2" v-if="content.btnlink && content.btntext">
+        <div class="btn-box flex lg:justify-end sm:mt-10 md:mt-10 lg:mt-0">
           <Button :text="content.btntext" :link="content.btnlink" />
         </div>
       </div>

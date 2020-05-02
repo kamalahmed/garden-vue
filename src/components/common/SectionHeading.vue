@@ -1,11 +1,18 @@
 <template>
-  <div class="section-heading text-center">
+  <div :class="classname">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SectionHeading"
+  name: "SectionHeading",
+  props: {
+    classname :{
+      type: String,
+      default : "section-heading text-center"
+    }
+  
+  }
 };
 </script>
