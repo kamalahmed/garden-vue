@@ -38,13 +38,15 @@
                 </li>
                 <li
                   class="lg:pr-4 lg:pl-4 md:border-l sm:border-l lg:pt-3 lg:pb-3 md:border-r sm:border-r text-sms text-primary topbar-opening-hours"
+                  :class="{'active': isClockActive}"
                 >
-                  <font-awesome-icon
+                  <font-awesome-icon @click="isClockActive=true"
                     :icon="['far', 'clock']"
                     :class="'fa fa-clock-o mr-1 text-black text-base md:p-3 sm:p-3 lg:p-0'"
                   />
                   <span
                     class="md:hidden sm:hidden lg:inline-block z-30"
+                    @click="isClockActive=false"
                   >Monday - Friday: 10:00 - 18:00</span>
                 </li>
               </ul>
@@ -887,7 +889,7 @@
               <div class="-mr-2 flex lg:hidden">
                 <div class="mt-2 mr-3">
                   <a href="#">
-                    <i class="fa fa-shopping-cart"></i>
+                    <font-awesome-icon :icon="['fas', 'shopping-cart']" />
                   </a>
                 </div>
                 <button
@@ -932,6 +934,14 @@
 
 <script>
 export default {
-  name: "HeaderSection"
+  name: "HeaderSection",
+  data: function () {
+      return {
+          isClockActive: false,
+      }
+  },
+  methods: {
+
+  }
 };
 </script>
