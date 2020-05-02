@@ -3,7 +3,7 @@
     <div class="lg:flex flex-wrap">
       <div class="lg:w-9/12 md:w-full" v-if="content.pageLinks">
         <div class="footer-menu-container">
-          <ul class="main-dropdown flex items-center font-normal">
+          <ul class="main-dropdown flex flex-wrap items-center font-normal">
             <li v-for="(plink, i) in content.pageLinks" :key="i">
               <a
                 :href="plink.url"
