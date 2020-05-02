@@ -17,6 +17,7 @@ module.exports = {
         '5xxl': ['3.75rem', '4.25rem'], // 60px
       },
       spacing: {
+        space0: '0', //40px
         space1: '2.50rem', //40px
         space2: '3.125rem', //50px
         space3: '3.75rem', // 60px

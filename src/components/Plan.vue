@@ -1,6 +1,6 @@
 <template>
   <div
-    class="lg:w-1/3 md:w-full sm:w-full mb-8 bg-white pricing-item bg-white relative"
+    class="lg:w-1/3 md:w-1/2 sm:w-full mb-8 bg-white pricing-item bg-white relative"
     :class=" plan.isFeatured ? 'pricing-item-active z-3' : 'z-2'"
   >
     <div
