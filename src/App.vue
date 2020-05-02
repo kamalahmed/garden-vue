@@ -13,8 +13,9 @@
     <Contact />
     <FooterSection :content="FooterSectionData" />
     <go-top :size="50" bg-color="#ffffff" fg-color="#000000"
+    box-shadow="0 10px 40px rgba(14, 16, 48, 0.1)"
     >
-    <font-awesome-icon :icon="['fas', 'angle-up']" :class="'absolute text-base z-10 go-to-top'" box-shadow="rgba(0, 0, 0, 0.3) 1px 2px 6px"/>
+    <font-awesome-icon :icon="['fas', 'angle-up']" :class="'absolute text-base z-10 go-to-top'"/>
     </go-top>
   </div>
 </template>
