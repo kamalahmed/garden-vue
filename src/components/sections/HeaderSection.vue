@@ -2,7 +2,7 @@
   <div class="header-area">
     <nav>
       <div class="border-b header-top-bar bg-white">
-        <div class="container">
+        <div class="lg:max-w-container lg:w-full m-auto lg:px-8 md:max-w-full sm:max-w-full md:p-0 xs:p-0">
           <!-- START TOP HEADER MENU -->
           <div>
             <div class="flex items-center justify-between">
@@ -12,7 +12,7 @@
                 >
                   <a
                     href="tel:(222) 400-630"
-                    class="text-primary hover:text-secondary focus:outline-none ease-in-out duration-300"
+                    class="flex items-center text-primary hover:text-secondary focus:outline-none ease-in-out duration-300"
                   >
                     <font-awesome-icon
                       :icon="['fas', 'phone-alt']"
@@ -27,7 +27,7 @@
                 >
                   <a
                     href="mailto:contact@ekko-theme.com"
-                    class="text-primary hover:text-secondary focus:outline-none ease-in-out duration-300"
+                    class="flex items-center text-primary hover:text-secondary focus:outline-none ease-in-out duration-300"
                   >
                     <font-awesome-icon
                       :icon="['far', 'envelope']"
@@ -37,15 +37,17 @@
                   </a>
                 </li>
                 <li
-                  class="lg:pr-4 lg:pl-4 md:border-l sm:border-l lg:pt-3 lg:pb-3 md:border-r sm:border-r text-sms text-primary topbar-opening-hours"
+                  class="flex items-center lg:pr-4 lg:pl-4 md:border-l sm:border-l lg:pt-3 lg:pb-3 md:border-r sm:border-r text-sms text-primary topbar-opening-hours"
                   :class="{'active': isClockActive}"
                 >
-                  <font-awesome-icon @click="isClockActive=true"
+                  <font-awesome-icon
+                    @click="isClockActive=true"
                     :icon="['far', 'clock']"
-                    :class="'fa fa-clock-o mr-1 text-black text-base md:p-3 sm:p-3 lg:p-0'"
+                    :class="'mr-1 text-primary text-base'"
+                    
                   />
                   <span
-                    class="md:hidden sm:hidden lg:inline-block z-30"
+                    class="md:hidden sm:hidden lg:inline-block z-30 ml-1 text-black"
                     @click="isClockActive=false"
                   >Monday - Friday: 10:00 - 18:00</span>
                 </li>
@@ -149,10 +151,10 @@
                                 role="menuitem"
                               >
                                 <img
-                              class="h-3 w-4 mr-1"
-                              :src="require('@/assets/img/lang-img2.png')"
-                              alt="language"
-                            />
+                                  class="h-3 w-4 mr-1"
+                                  :src="require('@/assets/img/lang-img2.png')"
+                                  alt="language"
+                                />
                                 <span>FR</span>
                               </a>
                             </li>
@@ -163,10 +165,10 @@
                                 role="menuitem"
                               >
                                 <img
-                              class="h-3 w-4 mr-1"
-                              :src="require('@/assets/img/lang-img3.png')"
-                              alt="language"
-                            />
+                                  class="h-3 w-4 mr-1"
+                                  :src="require('@/assets/img/lang-img3.png')"
+                                  alt="language"
+                                />
                                 <span>DE</span>
                               </a>
                             </li>
@@ -177,10 +179,10 @@
                                 role="menuitem"
                               >
                                 <img
-                              class="h-3 w-4 mr-1"
-                              :src="require('@/assets/img/lang-img4.png')"
-                              alt="language"
-                            />
+                                  class="h-3 w-4 mr-1"
+                                  :src="require('@/assets/img/lang-img4.png')"
+                                  alt="language"
+                                />
                                 <span>ES</span>
                               </a>
                             </li>
@@ -197,19 +199,17 @@
         </div>
       </div>
 
-
       <div class="header-menu-content bg-white z-20">
-        <div class="container">
+        <div class="lg:max-w-container lg:w-full m-auto lg:px-8 md:max-w-full sm:max-w-full md:px-4 sm:px-4 xs:px-4">
           <!-- START NAVBAR -->
           <div>
             <div
               class="main-menu-wrapper flex items-center justify-between lg:h-24 sm:h-16 md:h-16 relative"
             >
               <div>
-                                <a class="logo font-bold text-2xl" href="/" title="Ekko Gardener">Ekko Garden</a>
-
+                <a class="logo font-bold text-2xl" href="/" title="Ekko Gardener">Ekko Garden</a>
               </div>
-              <div class="main-menu-content" :class="{'active': isMobileMenuOpen}" >
+              <div class="main-menu-content" :class="{'active': isMobileMenuOpen}">
                 <div class="relative z-10">
                   <ul class="main-dropdown flex items-center uppercase text-sm font-medium">
                     <li>
@@ -218,11 +218,32 @@
                         class="text-primary text-sms pb-10 mr-8 hover:text-secondary ease-in-out duration-300"
                       >
                         Demos
-                        
-                        <font-awesome-icon :icon="['fas', 'angle-down']" :class="'md:hidden sm:hidden lg:inline'"/>
+                        <font-awesome-icon
+                          :icon="['fas', 'angle-down']"
+                          :class="'md:hidden sm:hidden lg:inline'"
+                        />
                       </a>
+
                     
-                      <font-awesome-icon :icon="['fas', 'angle-down']" :class="'hidden md:block sm:block lg:hidden menu-open-icon'" @click="handleDropDown"/>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        id="Capa_1"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 490.656 490.656"
+                        style="enable-background:new 0 0 490.656 490.656;"
+                        xml:space="preserve"
+                        :class="'hidden md:block sm:block lg:hidden menu-open-icon absolute  w-4 text-center top-0 right-0'"
+                         @click="handleDropDown"
+                      >
+                        <g>
+                          <path
+                            d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z"
+                          />
+                        </g>
+                      </svg>
 
                       <div
                         class="mega-menu menu-dropdown origin-top-left absolute mt-8 left-0 py-8 w-full rounded-b rounded-l bg-white text-primary"
@@ -561,10 +582,31 @@
                         class="text-primary text-sms pb-8 hover:text-secondary ease-in-out duration-300"
                       >
                         Elements
-                        <font-awesome-icon :icon="['fas', 'angle-down']" :class="'md:hidden sm:hidden lg:inline'"/>
+                        <font-awesome-icon
+                          :icon="['fas', 'angle-down']"
+                          :class="'md:hidden sm:hidden lg:inline'"
+                        />
                       </a>
-                      
-                      <font-awesome-icon :icon="['fas', 'angle-down']" :class="'hidden md:block sm:block lg:hidden menu-open-icon'" @click="handleDropDown"/>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        id="Capa_1"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 490.656 490.656"
+                        style="enable-background:new 0 0 490.656 490.656;"
+                        xml:space="preserve"
+                        :class="'hidden md:block sm:block lg:hidden menu-open-icon absolute  w-4 text-center top-0 right-0'"
+                         @click="handleDropDown"
+                      >
+                        <g>
+                          <path
+                            d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z"
+                          />
+                        </g>
+                      </svg>
                       <div
                         class="mega-menu menu-dropdown origin-top-left absolute mt-8 left-0 py-8 w-full rounded-b rounded-l bg-white text-primary"
                       >
@@ -937,19 +979,28 @@
 <script>
 export default {
   name: "HeaderSection",
-  data: function () {
-      return {
-          isClockActive: false,
-          isMobileMenuOpen: false,
-          isDropdownOpen: false,
-      }
+  data: function() {
+    return {
+      isClockActive: false,
+      isMobileMenuOpen: false,
+      isDropdownOpen: false
+    };
   },
   methods: {
-      handleDropDown(event){
-          $(event.target).closest('li').siblings().removeClass('active').find('.menu-dropdown').removeClass('active');
-            $(event.target).closest('li').toggleClass('active').find('.menu-dropdown').toggleClass('active');
-            return false;
-      }
+    handleDropDown(event) {
+      $(event.target)
+        .closest("li")
+        .siblings()
+        .removeClass("active")
+        .find(".menu-dropdown")
+        .removeClass("active");
+      $(event.target)
+        .closest("li")
+        .toggleClass("active")
+        .find(".menu-dropdown")
+        .toggleClass("active");
+      return false;
+    }
   }
 };
 </script>

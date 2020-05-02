@@ -511,17 +511,15 @@ body {
     .main-dropdown > li >a i {
         display:none;
     }
-    .main-dropdown > li > .menu-open-icon {
+    /* .main-dropdown > li > .menu-open-icon {
         font-size: 20px;
-        width: 30px;
+        width: 20px;
         text-align: center;
         cursor: pointer;
         position: absolute;
         top: 0;
         right: 5px;
-        height: 30px;
-        line-height: 30px;
-    }
+    } */
     .main-dropdown > li.active > .menu-open-icon {
         transform: rotate(-180deg);
     }

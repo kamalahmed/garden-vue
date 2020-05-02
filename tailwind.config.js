@@ -8,6 +8,9 @@ module.exports = {
       body: ['Roboto', 'sans-serif']
     },
     extend: {
+      maxWidth: {
+        container: '1024px'
+            },
       fontSize: {
         sms: '0.813rem', // 13px
         tiny: '0.938rem', // 15px
@@ -50,6 +53,9 @@ module.exports = {
         '1': 1,
         '2': 2,
         '3': 3,
+      },
+      screens: {
+        'xs': '425px',
       }
     }
   },
