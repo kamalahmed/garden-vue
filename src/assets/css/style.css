@@ -8,6 +8,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.go-to-top{
+    top: 15px;
+    font-size: 20px;
+    left: 19px;
+    color: #8c7a73;
+}
+.vue-go-top {
+    background-image: none !important;
+}
 /*======= theme-btn =========*/
 .theme-btn{
     position: relative;

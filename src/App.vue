@@ -12,6 +12,10 @@
     <CallToAction :content="CallToActionData" />
     <Contact />
     <FooterSection :content="FooterSectionData" />
+    <go-top :size="50" bg-color="#ffffff" fg-color="#000000"
+    >
+    <font-awesome-icon :icon="['fas', 'angle-up']" :class="'absolute text-base z-10 go-to-top'" box-shadow="rgba(0, 0, 0, 0.3) 1px 2px 6px"/>
+    </go-top>
   </div>
 </template>
 
@@ -29,6 +33,7 @@ import LatestBlog from "./components/sections/LatestBlog.vue";
 import CallToAction from "./components/sections/CallToAction.vue";
 import Contact from "./components/sections/Contact.vue";
 import FooterSection from "./components/sections/FooterSection.vue";
+import GoTop from '@inotom/vue-go-top';
 
 let bannerSectionData = {
   slides: [
@@ -442,7 +447,8 @@ export default {
     LatestBlog,
     CallToAction,
     Contact,
-    FooterSection
+    FooterSection,
+    GoTop
   }
 };
 </script>
