@@ -11,7 +11,7 @@
       <img :src="plan.icon" alt="plan icon" class="inline w-space3" />
     </div>
 
-    <div class="license-price month active">
+    <div class="license-price month" :class="{'active': !isChecked}">
       <span class="pricing-price block text-primary font-light text-5xxl">
         <span class="currency" v-if="plan.currencySymbol">{{plan.currencySymbol}}</span>
         {{plan.monthlyPrice}}
@@ -19,7 +19,7 @@
       <span class="pricing-time block text-ternary text-base">billed monthly</span>
     </div>
 
-    <div class="license-price year">
+    <div class="license-price year" :class="{'active': isChecked}">
       <span class="pricing-price block text-primary font-light text-5xxl">
         <span class="currency" v-if="plan.currencySymbol">{{plan.currencySymbol}}</span>
         {{plan.yearlyPrice}}
@@ -53,6 +53,9 @@ export default {
   props: {
     plan: {
       type: Object
+    },
+    isChecked: {
+      type:Boolean
     }
   }
 };
