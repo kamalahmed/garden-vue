@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <HeaderSection />
-    <Banner :slides="bannerSlider.slides" :itemPerSlide="bannerSlider.itemPerSlide" />
-    <Services :slides="serviceSlider.slides" :itemPerSlide="serviceSlider.itemPerSlide" />
+    <Banner :content="bannerSectionData" />
+    <Services :content="serviceSectionData" />
     <About :content="AboutSectionData" />
     <WhyChooseUs :content="WhyChooseUsData" />
     <Portfolio :content="PortfolioData" />
@@ -30,58 +30,76 @@ import CallToAction from "./components/sections/CallToAction.vue";
 import Contact from "./components/sections/Contact.vue";
 import FooterSection from "./components/sections/FooterSection.vue";
 
-let bannerSliderSlides = [
-  {
-    title:
-      "We've got lots of advice and inspiration to help you in your backyard.",
-    subtitle: "Professional gardening <br />care and services",
-    image: require("@/assets/img/garden-img1.jpg"),
-    buttontext: "purchase ekko",
-    buttonlink: "#"
-  },
-  {
-    title: "We value our clients and offer a professional service.",
-    subtitle: "Bringing your garden up to <br />peak condition",
-    image: require("@/assets/img/garden-img2.jpg"),
-    buttontext: "purchase ekko",
-    buttonlink: "#"
+let bannerSectionData = {
+  slides: [
+    {
+      title:
+        "We've got lots of advice and inspiration to help you in your backyard.",
+      subtitle: "Professional gardening <br />care and services",
+      image: require("@/assets/img/garden-img1.jpg"),
+      buttontext: "purchase ekko",
+      buttonlink: "#"
+    },
+    {
+      title: "We value our clients and offer a professional service.",
+      subtitle: "Bringing your garden up to <br />peak condition",
+      image: require("@/assets/img/garden-img2.jpg"),
+      buttontext: "purchase ekko",
+      buttonlink: "#"
+    }
+  ],
+  itemPerSlide: 1,
+  responsive: {
+    0: { items: 1, nav: false },
+    600: { items: 1, nav: true }
   }
-];
+};
 
-let serviceSliderSlides = [
-  {
-    title: "Lawn renovation",
-    subtitle:
-      "Donec enim diam vulputate vitae suscipit tellus mauris a diam maecenas.",
-    image: require("@/assets/img/garden-img3.jpg"),
-    buttontext: "read more",
-    buttonlink: "#"
-  },
-  {
-    title: "Pressure washing",
-    subtitle:
-      "Donec enim diam vulputate vitae suscipit tellus mauris a diam maecenas.",
-    image: require("@/assets/img/garden-img4.jpg"),
-    buttontext: "read more",
-    buttonlink: "#"
-  },
-  {
-    title: "Regular maintenance",
-    subtitle:
-      "Feugiat scelerisque varius morbi enim nunc faucibus ac felis donec et odio.",
-    image: require("@/assets/img/garden-img5.jpg"),
-    buttontext: "read more",
-    buttonlink: "#"
-  },
-  {
-    title: "Hedge trimming",
-    subtitle:
-      "Feugiat scelerisque varius morbi enim nunc faucibus ac felis donec et odio.",
-    image: require("@/assets/img/garden-img6.jpg"),
-    buttontext: "read more",
-    buttonlink: "#"
+let serviceSectionData = {
+  title: "Gardening services",
+  subtitle:
+    "We offer a wide range of professional services guaranteed to suit your needs.<br />We deal with all aspects of your garden’s maintenance.",
+  slides: [
+    {
+      title: "Lawn renovation",
+      subtitle:
+        "Donec enim diam vulputate vitae suscipit tellus mauris a diam maecenas.",
+      image: require("@/assets/img/garden-img3.jpg"),
+      buttontext: "read more",
+      buttonlink: "#"
+    },
+    {
+      title: "Pressure washing",
+      subtitle:
+        "Donec enim diam vulputate vitae suscipit tellus mauris a diam maecenas.",
+      image: require("@/assets/img/garden-img4.jpg"),
+      buttontext: "read more",
+      buttonlink: "#"
+    },
+    {
+      title: "Regular maintenance",
+      subtitle:
+        "Feugiat scelerisque varius morbi enim nunc faucibus ac felis donec et odio.",
+      image: require("@/assets/img/garden-img5.jpg"),
+      buttontext: "read more",
+      buttonlink: "#"
+    },
+    {
+      title: "Hedge trimming",
+      subtitle:
+        "Feugiat scelerisque varius morbi enim nunc faucibus ac felis donec et odio.",
+      image: require("@/assets/img/garden-img6.jpg"),
+      buttontext: "read more",
+      buttonlink: "#"
+    }
+  ],
+  itemPerSlide: 3,
+  responsive: {
+    0: { items: 1, nav: false },
+    600: { items: 2, nav: true },
+    769: { items: 3, nav: true }
   }
-];
+};
 
 let AboutSectionData = {
   title: "We can transform your outdoor space, whether that be large or small.",
@@ -236,30 +254,39 @@ let TestimonialData = {
     {
       name: "Sara Grant",
       address: "Kansas City, Missouri",
-      content: "Always prompt, polite, fairly priced. Never a hard sell for extras and knowledgable too. Price is hard to approximate as variety of work is diverse.",
+      content:
+        "Always prompt, polite, fairly priced. Never a hard sell for extras and knowledgable too. Price is hard to approximate as variety of work is diverse."
     },
     {
       name: "Luke Jacobs",
       address: "Arlington, Washington",
-      content: "Great quality plants at fair prices and very helpful staff. I had an issue which was resolved promptly. I do not hesitate to recommend this company.",
+      content:
+        "Great quality plants at fair prices and very helpful staff. I had an issue which was resolved promptly. I do not hesitate to recommend this company."
     },
     {
       name: "Claire Olson",
       address: "Sky Valley, California",
-      content: "The team did a great job with my patio. They cleaned it in a timely manner and cleaned it really well. I was surprised to see the original colour.",
+      content:
+        "The team did a great job with my patio. They cleaned it in a timely manner and cleaned it really well. I was surprised to see the original colour."
     },
     {
       name: "Phillip Hunt",
       address: "Chicago, Illinois",
-      content: "Your team achieved great results in my garden. It was all covered with bushes and weeds, but they managed to clear it up. Will book gardening services again.",
+      content:
+        "Your team achieved great results in my garden. It was all covered with bushes and weeds, but they managed to clear it up. Will book gardening services again."
     },
     {
       name: "Phillip Bunt",
       address: "Chapel Hill, North Carolina",
-      content: "Coming up to summer, we really wanted somewhere outside where we could entertain guests. Thanks to your gardeners we now have a nice clean patio.",
-    },
+      content:
+        "Coming up to summer, we really wanted somewhere outside where we could entertain guests. Thanks to your gardeners we now have a nice clean patio."
+    }
   ],
   itemPerSlide: 1,
+  responsive: {
+    0: { items: 1, nav: false },
+    600: { items: 1, nav: true }
+  }
 };
 
 let LatestBlogData = {
@@ -287,120 +314,112 @@ let LatestBlogData = {
       title: "How to grow and enjoy microgreens year-round",
       buttonText: "Read more",
       link: "#"
-    },
-  
+    }
   ],
-  loadMoreText: 'View All Articles',
-  loadMoreLink: '#',
+  loadMoreText: "View All Articles",
+  loadMoreLink: "#"
 };
 
 let CallToActionData = {
   title: "For a free site visit and quotation, <br>just give us a call.",
   subtitle: "Call us now: (222) 400-630",
-  buttonText: 'Purchase Ekko',
-  buttonLink: '#',
-  contactLink: '#',
-  contactLinkText: 'send us a message'
-}
+  buttonText: "Purchase Ekko",
+  buttonLink: "#",
+  contactLink: "#",
+  contactLinkText: "send us a message"
+};
 
 let FooterSectionData = {
-  footerTop : {
-    pageLinks : [
+  footerTop: {
+    pageLinks: [
       {
-        name: 'About',
-        url: 'about'
+        name: "About",
+        url: "about"
       },
       {
-        name: 'Disclaimer',
-        url: 'disclaimer'
+        name: "Disclaimer",
+        url: "disclaimer"
       },
       {
-        name: 'Privacy',
-        url: 'privacy'
+        name: "Privacy",
+        url: "privacy"
       },
       {
-        name: 'Advertise',
-        url: 'advertise'
+        name: "Advertise",
+        url: "advertise"
       },
       {
-        name: 'Contact us',
-        url: 'contact-us'
-      },
+        name: "Contact us",
+        url: "contact-us"
+      }
     ],
     socialLinks: [
       {
         url: "#",
-        icon: "facebook-f",
-        },
+        icon: "facebook-f"
+      },
       {
         url: "#",
-        icon: "twitter",
-        },
+        icon: "twitter"
+      },
       {
         url: "#",
-        icon: "instagram",
-        },
-     
+        icon: "instagram"
+      }
     ]
   },
   footerBottom: {
     widgets: [
       {
-        type: 'link',
+        type: "link",
         title: "About",
         links: [
-          {name: "Services", url:"#"},
-          {name: "Our Shop", url:"#"},
-          {name: "Job Opportunities", url:"#"},
-          {name: "Calender of events", url:"#"},
-          {name: "London", url:"#"},
+          { name: "Services", url: "#" },
+          { name: "Our Shop", url: "#" },
+          { name: "Job Opportunities", url: "#" },
+          { name: "Calender of events", url: "#" },
+          { name: "London", url: "#" }
         ]
       },
       {
-        type: 'link',
+        type: "link",
         title: "Additional links",
         links: [
-          {name: "About us", url:"#"},
-          {name: "Terms and conditions", url:"#"},
-          {name: "Privacy policy", url:"#"},
-          {name: "News", url:"#"},
-          {name: "Contact us", url:"#"},
+          { name: "About us", url: "#" },
+          { name: "Terms and conditions", url: "#" },
+          { name: "Privacy policy", url: "#" },
+          { name: "News", url: "#" },
+          { name: "Contact us", url: "#" }
         ]
       },
       {
-        type: 'link',
+        type: "link",
         title: "Categories",
         links: [
-          {name: "Garden trends", url:"#"},
-          {name: "Houseplants", url:"#"},
-          {name: "Landscaping", url:"#"},
-          {name: "Plant care", url:"#"},
-          {name: "London", url:"#"},
+          { name: "Garden trends", url: "#" },
+          { name: "Houseplants", url: "#" },
+          { name: "Landscaping", url: "#" },
+          { name: "Plant care", url: "#" },
+          { name: "London", url: "#" }
         ]
       },
       {
-        type: 'text',
+        type: "text",
         title: "Ekko",
-        description: "Making a positive first impression is essential to developing a strong customer relationship. Ekko is powerful enough to assist any small businesses."
-      },
+        description:
+          "Making a positive first impression is essential to developing a strong customer relationship. Ekko is powerful enough to assist any small businesses."
+      }
     ]
   },
   copyRight: "Ekko by KeyDesign. All rights reserved."
-}
-
+};
 
 export default {
   name: "App",
   data: function() {
     return {
-      bannerSlider: {
-        slides: bannerSliderSlides,
-        itemPerSlide: 1
-      },
-      serviceSlider: {
-        slides: serviceSliderSlides,
-        itemPerSlide: 3
-      },
+      bannerSectionData,
+      serviceSectionData,
       AboutSectionData,
       WhyChooseUsData,
       PortfolioData,
@@ -408,7 +427,7 @@ export default {
       TestimonialData,
       LatestBlogData,
       CallToActionData,
-      FooterSectionData,
+      FooterSectionData
     };
   },
   components: {
@@ -423,7 +442,7 @@ export default {
     LatestBlog,
     CallToAction,
     Contact,
-    FooterSection,
+    FooterSection
   }
 };
 </script>

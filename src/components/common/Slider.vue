@@ -1,5 +1,9 @@
 <template>
-  <carousel :items="itemPerSlide" :navText="[nexttext, prevtext]">
+  <carousel
+    :items="itemPerSlide"
+    :navText="[nexttext, prevtext]"
+    :responsive="responsive"
+  >
     <slot></slot>
   </carousel>
 </template>
@@ -10,6 +14,17 @@ import carousel from "vue-owl-carousel";
 export default {
   name: "Slider",
   props: {
+    responsive: {
+      type: Object,
+      default: function() {
+        return { 
+          0 : { items: 1, nav: false }, 
+          600: { items: 2, nav: true }, 
+          768: { items: 3, nav: true } 
+          };
+      }
+    },
+
     itemPerSlide: {
       type: Number,
       default: 1

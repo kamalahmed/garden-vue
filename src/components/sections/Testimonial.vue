@@ -7,7 +7,7 @@
     <div class="container">
       <div class="testimonial-wrap">
         <div class="testimonial-carousel lg:w-11/12 mx-auto">
-          <Slider :itemPerSlide="content.itemPerSlide">
+          <Slider :itemPerSlide="content.itemPerSlide" :responsive="content.responsive">
             <TestimonialSingle
               v-for="(testimonial, i) in content.testimonials"
               :key="i"

@@ -1,32 +1,23 @@
 <template>
   <section class="banner-area text-center nav-carousel text-white -mb-2">
-    <Slider :itemPerSlide="itemPerSlide">
-      <BannerSingleSlide v-for="(slide, index) in slides" :key="index" :slide="slide" />
-
+    <Slider :itemPerSlide="content.itemPerSlide" :responsive="content.responsive">
+      <BannerSingleSlide v-for="(slide, index) in content.slides" :key="index" :slide="slide" />
     </Slider>
   </section>
 </template>
 
 <script>
 import Slider from "@/components/common/Slider";
-import BannerSingleSlide  from "@/components/BannerSingleSlide";
+import BannerSingleSlide from "@/components/BannerSingleSlide";
 
 export default {
   name: "Banner",
   props: {
-      itemPerSlide :{
-        type: Number,
-        default: 1
-    },
-    slides: {
-      type: Array,
-      default: function() {
-        return [];
-      }
-    },
-
+    content: {
+      type: Object
+    }
   },
-  
-  components: {Slider, BannerSingleSlide }
+
+  components: { Slider, BannerSingleSlide }
 };
 </script>
