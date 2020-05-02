@@ -209,7 +209,7 @@
                                 <a class="logo font-bold text-2xl" href="/" title="Ekko Gardener">Ekko Garden</a>
 
               </div>
-              <div class="main-menu-content">
+              <div class="main-menu-content" :class="{'active': isMobileMenuOpen}" >
                 <div class="relative z-10">
                   <ul class="main-dropdown flex items-center uppercase text-sm font-medium">
                     <li>
@@ -219,11 +219,11 @@
                       >
                         Demos
                         
-                        <font-awesome-icon :icon="['fas', 'angle-down']"/>
+                        <font-awesome-icon :icon="['fas', 'angle-down']" :class="'md:hidden sm:hidden lg:inline'"/>
                       </a>
-                      <span
-                        class="fa fa-angle-down hidden md:block sm:block lg:hidden menu-open-icon"
-                      ></span>
+                    
+                      <font-awesome-icon :icon="['fas', 'angle-down']" :class="'hidden md:block sm:block lg:hidden menu-open-icon'" @click="handleDropDown"/>
+
                       <div
                         class="mega-menu menu-dropdown origin-top-left absolute mt-8 left-0 py-8 w-full rounded-b rounded-l bg-white text-primary"
                       >
@@ -561,11 +561,10 @@
                         class="text-primary text-sms pb-8 hover:text-secondary ease-in-out duration-300"
                       >
                         Elements
-                        <font-awesome-icon :icon="['fas', 'angle-down']"/>
+                        <font-awesome-icon :icon="['fas', 'angle-down']" :class="'md:hidden sm:hidden lg:inline'"/>
                       </a>
-                      <span
-                        class="fa fa-angle-down hidden md:block sm:block lg:hidden menu-open-icon"
-                      ></span>
+                      
+                      <font-awesome-icon :icon="['fas', 'angle-down']" :class="'hidden md:block sm:block lg:hidden menu-open-icon'" @click="handleDropDown"/>
                       <div
                         class="mega-menu menu-dropdown origin-top-left absolute mt-8 left-0 py-8 w-full rounded-b rounded-l bg-white text-primary"
                       >
@@ -894,12 +893,14 @@
                 </div>
                 <button
                   class="menu-open inline-flex items-center justify-center p-2 rounded-md text-primary focus:outline-none"
+                  @click="isMobileMenuOpen=!isMobileMenuOpen"
                 >
                   <svg
                     class="block h-6 w-6 bars"
                     stroke="currentColor"
                     fill="none"
                     viewBox="0 0 24 24"
+                    :class="{'active': isMobileMenuOpen}"
                   >
                     <path
                       stroke-linecap="round"
@@ -913,6 +914,7 @@
                     stroke="currentColor"
                     fill="none"
                     viewBox="0 0 24 24"
+                    :class="{'active': isMobileMenuOpen}"
                   >
                     <path
                       stroke-linecap="round"
@@ -938,10 +940,16 @@ export default {
   data: function () {
       return {
           isClockActive: false,
+          isMobileMenuOpen: false,
+          isDropdownOpen: false,
       }
   },
   methods: {
-
+      handleDropDown(event){
+          $(event.target).closest('li').siblings().removeClass('active').find('.menu-dropdown').removeClass('active');
+            $(event.target).closest('li').toggleClass('active').find('.menu-dropdown').toggleClass('active');
+            return false;
+      }
   }
 };
 </script>

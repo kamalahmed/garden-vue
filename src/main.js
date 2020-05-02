@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import $ from "jquery";
+window.$ = $;
 import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch, faTimes, faShoppingCart, faAngleLeft, faAngleRight, faLongArrowAltRight, faPhoneAlt, faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
