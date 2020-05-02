@@ -1,6 +1,6 @@
 <template>
   <section
-    class="choose-area relative z-1 text-white bg-fixed bg-no-repeat bg-cover pt-space12 pb-space5 text-center"
+    class="choose-area relative z-1 text-white bg-fixed bg-no-repeat bg-cover lg:pt-space12 md:pt-space4 pt-space3 md:pb-space4 pb-space3 text-center"
     :style="{ backgroundImage: 'url(' + content.image + ')' }"
     
   >
