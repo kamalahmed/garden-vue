@@ -86,15 +86,19 @@
                 <div class="header-action z-20 flex items-center md:hidden sm:hidden lg:flex">
                   <button
                     class="border-0 pr-5 pl-5 pt-3 pb-3 bg-transparent text-primary hover:text-secondary ease-in-out duration-300 focus:outline-none search-icon"
+                    @click="isSearchFormOpen = true"
                   >
                     <font-awesome-icon :icon="['fas', 'search']" />
                   </button>
                   <div class="relative">
+                    <transition name="slide-fade">
                     <div
-                      class="search-form hidden -mt-6 mr-3 bg-white p-3 rounded shadow-sm border border-gray-100 absolute top-0 right-0 w-56"
+                      class="search-form -mt-6 mr-3 bg-white p-3 rounded shadow-sm border border-gray-100 absolute top-0 right-0 w-56"
+                      v-show="isSearchFormOpen"
                     >
                       <button
                         class="absolute border-0 bg-transparent text-primary right-0 top-0 w-8 h-8 hover:text-secondary ease-in-out duration-300 search-form-close focus:outline-none"
+                         @click="isSearchFormOpen = false"
                       >
                         <font-awesome-icon :icon="['fas', 'times']" />
                       </button>
@@ -114,6 +118,8 @@
                         </button>
                       </div>
                     </div>
+                    </transition>
+
                   </div>
                   <div class="flex items-center">
                     <div>
@@ -204,8 +210,21 @@ export default {
   data: function() {
     return {
       isClockActive: false,
+      isSearchFormOpen: false,
 
     };
   },
 };
 </script>
+
+<style scoped>
+/* durations and timing functions.              */
+.slide-fade-enter-active, .slide-fade-leave-active  {
+  transition: all .3s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
