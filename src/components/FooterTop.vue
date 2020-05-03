@@ -7,7 +7,7 @@
             <li v-for="(plink, i) in content.pageLinks" :key="i">
               <a
                 :href="plink.url"
-                class="text-ternary pb-1 mr-8 hover:text-secondary ease-in-out duration-300"
+                class="text-ternary inline-block pb-2 mb-2 lg:mb-0 md:mb-0 mr-8 hover:text-secondary ease-in-out duration-300"
                 v-text="plink.name"
               ></a>
             </li>

@@ -524,14 +524,12 @@ body {
     }
     .main-dropdown {
         display: block;
-        padding: 20px 10px 20px 20px;
     }
     .main-dropdown > li {
          display:block;
         position: relative;
     }
     .main-dropdown > li >a {
-         display:block;
         padding-bottom: 12px;
         margin-right: 0;
     }
