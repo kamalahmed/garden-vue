@@ -800,7 +800,7 @@ export default {
     var nav = document.querySelector(".header-menu-content");
 
     window.document.onscroll = () => {
-      console.log('hello');
+      console.log("hello");
       if (window.scrollY > 50) {
         document.body.style.paddingTop = nav.offsetHeight + "px";
         document.body.classList.add("fixed-nav");
