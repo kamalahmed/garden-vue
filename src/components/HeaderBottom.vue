@@ -36,7 +36,7 @@
                     viewBox="0 0 490.656 490.656"
                     style="enable-background:new 0 0 490.656 490.656;"
                     xml:space="preserve"
-                    :class="'hidden md:block sm:block lg:hidden menu-open-icon absolute  w-4 text-center top-0 right-0'"
+                    :class="'hidden md:block sm:block lg:hidden menu-open-icon absolute  w-4 text-center'"
                     @click="handleDropDown"
                   >
                     <g>
@@ -397,7 +397,7 @@
                     viewBox="0 0 490.656 490.656"
                     style="enable-background:new 0 0 490.656 490.656;"
                     xml:space="preserve"
-                    :class="'hidden md:block sm:block lg:hidden menu-open-icon absolute  w-4 text-center top-0 right-0'"
+                    :class="'hidden md:block sm:block lg:hidden menu-open-icon absolute  w-4 text-center'"
                     @click="handleDropDown"
                   >
                     <g>
