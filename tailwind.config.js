@@ -9,7 +9,8 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        container: '1024px'
+        'laptop': '1024px',
+        'desktop': '1280px'
             },
       fontSize: {
         sms: '0.813rem', // 13px
@@ -54,9 +55,6 @@ module.exports = {
         '2': 2,
         '3': 3,
       },
-      screens: {
-        'xs': '425px',
-      }
     }
   },
   variants: {},

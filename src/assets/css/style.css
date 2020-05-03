@@ -7,6 +7,8 @@
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .go-to-top{
     top: 15px;
@@ -16,6 +18,13 @@ body {
 }
 .vue-go-top {
     background-image: none !important;
+    transition: bottom .3s;
+}
+.vue-go-top:hover {
+    bottom: 45px !important;
+}
+.vue-go-top:focus {
+    outline:none;
 }
 /*======= theme-btn =========*/
 .theme-btn{
@@ -145,12 +154,20 @@ body {
 }
 .nav-carousel .owl-nav .owl-prev{
     left: 50px;
-
 }
 .nav-carousel .owl-nav .owl-next {
     left: auto;
     right: 50px;
+    transition: padding .3s;
 }
+
+.nav-carousel .owl-nav .owl-prev:hover{
+    padding-right: 12px;
+}
+.nav-carousel .owl-nav .owl-next:hover{
+    padding-left: 12px;
+}
+
 
 /*======= banner-area owt dots =========*/
 
@@ -193,20 +210,30 @@ body {
 .service-carousel .owl-stage-outer {
     padding: 15px 0;
 }
-.service-area.nav-carousel .owl-nav div {
+
+.service-area.nav-carousel .owl-theme .owl-nav [class*='owl-'] {
     border-color: rgba(0,0,0,.2);
     color: #353535;
+    padding: 0 7px;
 }
+
 .service-area.nav-carousel .owl-nav .owl-prev {
     left: -85px;
 }
 .service-area.nav-carousel .owl-nav .owl-next {
     right: -85px;
 }
-.service-area.nav-carousel .owl-nav div:hover {
+.service-area.nav-carousel .owl-theme .owl-nav [class*='owl-']:hover {
     border-color: #353535;
     color: #353535;
 }
+.service-area.nav-carousel .owl-nav .owl-prev:hover{
+    padding-right: 12px;
+}
+.service-area.nav-carousel .owl-nav .owl-next:hover{
+    padding-left: 12px;
+}
+
 .service-item {
     margin: 0 15px;
     -webkit-box-shadow: 0 0 30px rgba(14, 16, 48, 0.05);
@@ -477,7 +504,7 @@ body {
         display:none;
     }
     .menu-open .times.active {
-        @apply .block;
+        display:block;
     }
     /*====== main-menu-content =====*/
     .main-menu-content {
@@ -493,33 +520,25 @@ body {
     }
     .menu-dropdown.active,
     .main-menu-content.active {
-       @apply .block;
+       display:block;
     }
     .main-dropdown {
         display: block;
         padding: 20px 10px 20px 20px;
     }
     .main-dropdown > li {
-         @apply .block;
+         display:block;
         position: relative;
     }
     .main-dropdown > li >a {
-         @apply .block;
+         display:block;
         padding-bottom: 12px;
-        @apply .mr-0;
+        margin-right: 0;
     }
     .main-dropdown > li >a i {
         display:none;
     }
-    /* .main-dropdown > li > .menu-open-icon {
-        font-size: 20px;
-        width: 20px;
-        text-align: center;
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        right: 5px;
-    } */
+
     .main-dropdown > li.active > .menu-open-icon {
         transform: rotate(-180deg);
     }
@@ -538,7 +557,7 @@ body {
         display: none;
     }
     .menu-dropdown .flex {
-        @apply .block;
+        display:block;
     }
     .menu-dropdown .menu-item {
         width: 100%;
@@ -553,20 +572,26 @@ body {
         left: -104px;
     }
     .banner-content .text-5xxl {
-       @apply .text-4xxl;
+       font-size: 2.375rem;
+       line-height: 3rem;
     }
     .nav-carousel .owl-nav {
         display:none;
     }
+
 }
 
 @media only screen and (max-width: 639px) and (min-width: 320px) {
+    .main-header-container{
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
     .header-info-bar .topbar-opening-hours span {
         left: -50px;
     }
     .header-action-bar,
     .header-info-bar {
-       @apply .flex;
+       display:flex;
     }
     .header-action-bar .social-action li,
     .header-info-bar li {
@@ -588,7 +613,7 @@ body {
     }
     .menu-open-icon,
     .main-dropdown-btn {
-        @apply .block;
+        display:block;
     }
     .main-menu-wrapper {
         @apply .h-16;
@@ -600,7 +625,7 @@ body {
     .portfolio-item,
     .map-container,
     .footer-widget {
-        @apply .w-full;
+        width: 100%;
     }
     .about-heading,
     .cta-box {
@@ -617,8 +642,3 @@ body {
     }
 }
 
-@media (max-width: 375px) {
-    .header-info-bar li:first-child {
-        padding-left: 0;
-    }
-}

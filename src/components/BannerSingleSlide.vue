@@ -3,8 +3,8 @@
         :style="{ backgroundImage: 'url(' + slide.image + ')' }" >
         <div class="container">
             <div class="banner-content -mt-6">
-                <p class="text-lg pb-5" v-if="slide.title" v-html="slide.title"></p>
-                <h2 class="font-bold text-5xxl pb-8" v-if="slide.subtitle" v-html="slide.subtitle"></h2>
+                <p class="text-lg pb-5 lg:block hidden" v-if="slide.title" v-html="slide.title"></p>
+                <h2 class="font-bold lg:text-5xxl text-2xxl pb-8 " v-if="slide.subtitle" v-html="slide.subtitle"></h2>
                 <div class="mt-5">
                 <a
                     v-if="slide.buttonlink"

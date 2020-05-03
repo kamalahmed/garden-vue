@@ -2,7 +2,7 @@
   <div class="header-area">
     <nav>
       <div class="border-b header-top-bar bg-white">
-        <div class="lg:max-w-container lg:w-full m-auto lg:px-8 md:max-w-full sm:max-w-full md:p-0 xs:p-0">
+        <div class="lg:max-w-desktop lg:w-full m-auto lg:px-8 md:max-w-full sm:max-w-full md:p-0 xs:p-0">
           <!-- START TOP HEADER MENU -->
           <div>
             <div class="flex items-center justify-between">
@@ -200,7 +200,7 @@
       </div>
 
       <div class="header-menu-content bg-white z-20">
-        <div class="lg:max-w-container lg:w-full m-auto lg:px-8 md:max-w-full sm:max-w-full md:px-4 sm:px-4 xs:px-4">
+        <div class="lg:max-w-desktop lg:w-full m-auto lg:px-8 md:max-w-full sm:max-w-full md:px-4 sm:px-4 main-header-container">
           <!-- START NAVBAR -->
           <div>
             <div

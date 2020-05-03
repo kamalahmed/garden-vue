@@ -12,10 +12,15 @@
     <CallToAction :content="CallToActionData" />
     <Contact />
     <FooterSection :content="FooterSectionData" />
-    <go-top :size="50" bg-color="#ffffff" fg-color="#000000"
-    box-shadow="0 10px 40px rgba(14, 16, 48, 0.1)"
+    <go-top
+      :size="50"
+      bg-color="#ffffff"
+      fg-color="#000000"
+      box-shadow="0 10px 40px rgba(14, 16, 48, 0.1)"
+      :right="25"
+      :bottom="40"
     >
-    <font-awesome-icon :icon="['fas', 'angle-up']" :class="'absolute text-base z-10 go-to-top'"/>
+      <font-awesome-icon :icon="['fas', 'angle-up']" :class="'absolute text-base z-10 go-to-top'" />
     </go-top>
   </div>
 </template>
@@ -34,7 +39,7 @@ import LatestBlog from "./components/sections/LatestBlog.vue";
 import CallToAction from "./components/sections/CallToAction.vue";
 import Contact from "./components/sections/Contact.vue";
 import FooterSection from "./components/sections/FooterSection.vue";
-import GoTop from '@inotom/vue-go-top';
+import GoTop from "@inotom/vue-go-top";
 
 let bannerSectionData = {
   slides: [
@@ -103,7 +108,7 @@ let serviceSectionData = {
   responsive: {
     0: { items: 1, nav: false },
     600: { items: 2, nav: true },
-    769: { items: 3, nav: true }
+    769: { items: 3, nav: true, dots: false }
   }
 };
 
