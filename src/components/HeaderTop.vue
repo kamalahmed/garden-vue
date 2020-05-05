@@ -140,14 +140,29 @@
                       >
                         <img
                           class="h-3 w-4 mr-1"
-                          :src="require('@/assets/img/lang-img.png')"
+                          :src="require('@/assets/img/lang-canada.png')"
                           alt="language"
                         />
-                        <span>EN</span>
+                        <span>CA</span>
                       </button>
                       <ul
                         class="language-menu-dropdown origin-top-right absolute right-0 mt-3 w-16 rounded bg-white shadow-lg"
                       >
+                      <li>
+                          <a
+                            href="#"
+                            class="flex items-center px-3 py-1 text-primary hover:text-secondary ease-in-out duration-300"
+                            role="menuitem"
+                          >
+                            <img
+                          class="h-3 w-4 mr-1"
+                          :src="require('@/assets/img/lang-img.png')"
+                          alt="language"
+                        />
+                        <span>EN</span>
+                          </a>
+                        </li>
+
                         <li>
                           <a
                             href="#"
