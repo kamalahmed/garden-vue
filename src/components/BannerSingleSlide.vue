@@ -1,5 +1,5 @@
 <template>
-    <div class="single-slide-item bg-local pt-48 pb-48 relative"
+    <div class="single-slide-item bg-local pt-48 pb-48 relative bg-cover"
         :style="{ backgroundImage: 'url(' + slide.image + ')' }" >
         <div class="container">
             <div class="banner-content -mt-6">
